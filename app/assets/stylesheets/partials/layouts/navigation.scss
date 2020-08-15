@@ -12,10 +12,15 @@ nav {
       }
     }
   }
-.navbar-default, .navbar-toggle:focus, .collapsed, button.navbar-toggle {
+
+ .navbar-default, .navbar-toggle:focus, .collapsed, button.navbar-toggle {
     background: $navbarColor !important;
     border: none;
     a {
       color: white !important;
     }
+  }
+
+body {
+   margin-top: 50px;
   }
