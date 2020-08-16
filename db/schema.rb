@@ -10,7 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_16_020715) do
+ActiveRecord::Schema.define(version: 2020_08_16_194608) do
+
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
+    t.string "branch"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "posts", force: :cascade do |t|
+    t.string "title"
+    t.text "content"
+    t.integer "category_id"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_posts_on_category_id"
+    t.index ["user_id"], name: "index_posts_on_user_id"
+  end
 
 # Could not dump table "users" because of following StandardError
 #   Unknown type 'srting' for column 'name'
