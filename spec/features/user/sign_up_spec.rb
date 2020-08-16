@@ -1,6 +1,6 @@
-require "rails_helper"
+require 'rails_helper'
 
-RSpec.feature "Sign up", :type => :feature do
+RSpec.feature 'Sign up', type: :feature do
   let(:user) { build(:user) }
 
   scenario 'user navigates to sign up page and successfully signs up', js: true do
@@ -13,5 +13,4 @@ RSpec.feature "Sign up", :type => :feature do
     find('.sign-up-button').click
     expect(page).to have_selector('#user-settings')
   end
-
 end
