@@ -12,3 +12,4 @@ $(document).on('turbolinks:load', function() {
       $('.myModal').modal('show');
     });
   });
+  
